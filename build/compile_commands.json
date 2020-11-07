@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-9    -g   -std=gnu++17 -o CMakeFiles/EasyVulkan.dir/main.cpp.o -c /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/main.cpp",
+  "file": "/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/main.cpp"
+}
+]

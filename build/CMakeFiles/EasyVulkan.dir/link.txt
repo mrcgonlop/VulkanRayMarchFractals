@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-9  -g   CMakeFiles/EasyVulkan.dir/main.cpp.o  -o EasyVulkan  -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi 

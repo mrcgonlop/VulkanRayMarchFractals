@@ -1,0 +1,3 @@
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/build/CMakeFiles/rebuild_cache.dir
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/build/CMakeFiles/edit_cache.dir
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/build/CMakeFiles/EasyVulkan.dir

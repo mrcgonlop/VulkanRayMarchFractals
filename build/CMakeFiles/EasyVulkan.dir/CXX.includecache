@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanTools.hpp
+GLFW/glfw3.h
+-
+iostream
+-
+vector
+-
+optional
+-
+set
+-
+
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
+VulkanTools.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanTools.hpp
+camera.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/camera.hpp
+chrono
+-
+
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/camera.hpp
+glm/glm.hpp
+-
+glm/gtc/quaternion.hpp
+-
+glm/gtx/quaternion.hpp
+-
+
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/main.cpp
+VulkanWindowApp.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
+
