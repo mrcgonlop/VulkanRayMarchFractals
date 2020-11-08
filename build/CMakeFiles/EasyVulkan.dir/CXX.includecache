@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanTools.hpp
-GLFW/glfw3.h
--
-iostream
--
-vector
--
-optional
--
-set
--
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanMaster.hpp
+vulkancomponents/SwapChainUtils.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/SwapChainUtils.hpp
 
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
-VulkanTools.hpp
-/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanTools.hpp
+VulkanMaster.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanMaster.hpp
 camera.hpp
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/camera.hpp
 chrono
@@ -37,4 +29,16 @@ glm/gtx/quaternion.hpp
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/main.cpp
 VulkanWindowApp.hpp
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
+
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/SwapChainUtils.hpp
+GLFW/glfw3.h
+-
+iostream
+-
+vector
+-
+optional
+-
+set
+-
 

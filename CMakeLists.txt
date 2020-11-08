@@ -7,4 +7,5 @@ set(CMAKE_CXX_STANDARD 17)
 #file(COPY shaders/vert.spv DESTINATION shaders)
 link_libraries(glfw vulkan dl pthread X11 Xxf86vm Xrandr Xi)
 
-add_executable(EasyVulkan main.cpp VulkanWindowApp.hpp VulkanTools.hpp camera.hpp)
+add_executable(EasyVulkan main.cpp VulkanWindowApp.hpp 
+  VulkanMaster.hpp camera.hpp vulkancomponents/SwapChainUtils.hpp)

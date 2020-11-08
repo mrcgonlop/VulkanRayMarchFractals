@@ -1,4 +1,4 @@
-#include "VulkanTools.hpp"
+#include "VulkanMaster.hpp"
 #include "camera.hpp"
 #include <chrono>
 
@@ -11,14 +11,14 @@ class MyVulkanWindowApp {
 public:
     void run(){
         initWindow();
-        initVulkan();
+        vulkanMaster.setUp(window);
         mainLoop();
         cleanup();
     }
 
 private:
     GLFWwindow *window;
-    VulkanTools vulkanTools;
+    VulkanMaster vulkanMaster;
 
     bool lmb_down = false;
 	bool rmb_down = false;
@@ -74,10 +74,6 @@ private:
         app->framebufferResized = true;
     }
 
-    void initVulkan() {
-        vulkanTools.setUp(window);
-    }
-
     void mainLoop() {
         auto start_time = std::chrono::high_resolution_clock::now();
 		auto previous = std::chrono::high_resolution_clock::now();
@@ -95,7 +91,7 @@ private:
     }
 
     void cleanup(){
-        vulkanTools.cleanUp();
+        vulkanMaster.cleanUp();
         glfwDestroyWindow(window);
         glfwTerminate();
     }

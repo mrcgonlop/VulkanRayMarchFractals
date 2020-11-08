@@ -118,7 +118,8 @@
 			[
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -137,12 +138,17 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "VulkanTools.hpp",
+			"path" : "VulkanMaster.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "camera.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "vulkancomponents/SwapChainUtils.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],
