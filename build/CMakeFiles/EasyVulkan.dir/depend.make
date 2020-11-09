@@ -5,5 +5,6 @@ CMakeFiles/EasyVulkan.dir/main.cpp.o: ../VulkanMaster.hpp
 CMakeFiles/EasyVulkan.dir/main.cpp.o: ../VulkanWindowApp.hpp
 CMakeFiles/EasyVulkan.dir/main.cpp.o: ../camera.hpp
 CMakeFiles/EasyVulkan.dir/main.cpp.o: ../main.cpp
+CMakeFiles/EasyVulkan.dir/main.cpp.o: ../vulkancomponents/Renderer.hpp
 CMakeFiles/EasyVulkan.dir/main.cpp.o: ../vulkancomponents/SwapChainUtils.hpp
 

@@ -1,4 +1,9 @@
+#ifndef GLM_HPP_INCLUDED
+#define GLM_HPP_INCLUDED
+#pragma once
 #include <glm/glm.hpp>
+#endif
+
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
 

@@ -6,4 +6,5 @@ CMakeFiles/EasyVulkan.dir/main.cpp.o
  /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
  /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/camera.hpp
  /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/main.cpp
+ /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/Renderer.hpp
  /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/SwapChainUtils.hpp

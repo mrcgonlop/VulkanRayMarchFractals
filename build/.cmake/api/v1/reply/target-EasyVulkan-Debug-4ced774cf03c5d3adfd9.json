@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -119,7 +119,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -149,6 +150,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "vulkancomponents/SwapChainUtils.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "vulkancomponents/Renderer.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

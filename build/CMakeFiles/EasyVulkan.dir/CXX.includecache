@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanMaster.hpp
-vulkancomponents/SwapChainUtils.hpp
-/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/SwapChainUtils.hpp
+vulkancomponents/Renderer.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/Renderer.hpp
 
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
 VulkanMaster.hpp
@@ -30,6 +30,10 @@ glm/gtx/quaternion.hpp
 VulkanWindowApp.hpp
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/VulkanWindowApp.hpp
 
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/Renderer.hpp
+SwapChainUtils.hpp
+/home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/SwapChainUtils.hpp
+
 /home/mgonzalo/Escritorio/research/VulkanRayMarchFractals/vulkancomponents/SwapChainUtils.hpp
 GLFW/glfw3.h
 -
@@ -40,5 +44,13 @@ vector
 optional
 -
 set
+-
+array
+-
+fstream
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
 -
 

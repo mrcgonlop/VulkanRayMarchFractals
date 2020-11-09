@@ -11,14 +11,14 @@ class MyVulkanWindowApp {
 public:
     void run(){
         initWindow();
-        vulkanMaster.setUp(window);
+        vulkan_master.setUp(window);
         mainLoop();
-        cleanup();
+        cleanUp();
     }
 
 private:
     GLFWwindow *window;
-    VulkanMaster vulkanMaster;
+    VulkanMaster vulkan_master;
 
     bool lmb_down = false;
 	bool rmb_down = false;
@@ -90,8 +90,8 @@ private:
         }
     }
 
-    void cleanup(){
-        vulkanMaster.cleanUp();
+    void cleanUp(){
+        vulkan_master.cleanUp();
         glfwDestroyWindow(window);
         glfwTerminate();
     }

@@ -1,4 +1,4 @@
-#include "vulkancomponents/SwapChainUtils.hpp"
+#include "vulkancomponents/Renderer.hpp"
 
 const bool enableValidationLayers = false;
 
@@ -43,8 +43,9 @@ public:
     VkCommandPool computeCommandPool;
     VkCommandPool transferCommandPool;
 
-    SwapChainUtils swapChainUtils;
     VkSwapchainKHR swapChainKHR;
+
+    Renderer renderer;
 
     void setUp(GLFWwindow *window) {
         createInstance();
@@ -52,9 +53,11 @@ public:
         setUpDevices();
         createCommandPools();
         createSwapChainKHR(window);
+        renderer.setUp(logicalDevice);
     }
 
     void cleanUp() {
+        renderer.cleanUp(logicalDevice);
         vkDestroySwapchainKHR(logicalDevice, swapChainKHR, nullptr);
         destroyCommandPools(logicalDevice);
         vkDestroyDevice(logicalDevice, nullptr);
@@ -165,7 +168,7 @@ private:
         bool extensionsSupported = checkDeviceExtensionSupport(device);
         bool swapChainAdequate = false;
         if (extensionsSupported) {
-            SwapChainSupportDetails swapChainSupport = swapChainUtils.querySwapChainSupport(device, surface);
+            SwapChainSupportDetails swapChainSupport = querySwapChainSupport(device, surface);
             swapChainAdequate = !swapChainSupport.formats.empty() && !swapChainSupport.presentModes.empty();
         }
         return indices.isComplete() && extensionsSupported && swapChainAdequate;
@@ -250,10 +253,10 @@ private:
     }
 
     void createSwapChainKHR(GLFWwindow *window) {
-        SwapChainSupportDetails swapChainSupport = swapChainUtils.querySwapChainSupport(physicalDevice, surface);
-        VkSurfaceFormatKHR surfaceFormat = swapChainUtils.chooseSwapSurfaceFormat(swapChainSupport.formats);
-        VkPresentModeKHR presentMode = swapChainUtils.chooseSwapPresentMode(swapChainSupport.presentModes);
-        VkExtent2D extent = swapChainUtils.chooseSwapExtent(swapChainSupport.capabilities,window);
+        SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice, surface);
+        VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
+        VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
+        VkExtent2D extent = chooseSwapExtent(swapChainSupport.capabilities,window);
         uint32_t imageCount = swapChainSupport.capabilities.minImageCount + 1;
         if (swapChainSupport.capabilities.maxImageCount > 0 && imageCount > swapChainSupport.capabilities.maxImageCount) {
             imageCount = swapChainSupport.capabilities.maxImageCount;
@@ -285,10 +288,11 @@ private:
             throw std::runtime_error("failed to create swap chain!");
         }
         vkGetSwapchainImagesKHR(logicalDevice, swapChainKHR, &imageCount, nullptr);
-        swapChainUtils.swapChainImages.resize(imageCount);
-        vkGetSwapchainImagesKHR(logicalDevice, swapChainKHR, &imageCount, swapChainUtils.swapChainImages.data());
-        swapChainUtils.swapChainImageFormat = surfaceFormat.format;
-        swapChainUtils.swapChainExtent = extent;
+        renderer.swapchain_utils.swapChainImages.resize(imageCount);
+        vkGetSwapchainImagesKHR(logicalDevice, swapChainKHR, &imageCount,
+            renderer.swapchain_utils.swapChainImages.data());
+        renderer.swapchain_utils.swapChainImageFormat = surfaceFormat.format;
+        renderer.swapchain_utils.swapChainExtent = extent;
     }
 
 };
